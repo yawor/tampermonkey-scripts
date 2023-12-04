@@ -22,6 +22,9 @@
                     document.querySelectorAll('#modalRoot .swiper-zoom-container > img').forEach((img) => {
                         img.removeAttribute('srcset');
                         img.style.height = 'auto';
+                        img.addEventListener('click', () => {
+                            window.open(img.src, '_blank');
+                        });
                     });
                 }, 500);
             }
